@@ -38,9 +38,10 @@
 
 - Selectores: de tipo, de clase, de id, hijos (directos y toda la descendencia), selector universal
 - Color: color y background
-- Fuente: font-size, font-family, text-align
+- Fuente: font-size, font-family, font-weight
 - Modelo de caja: margin, padding, border, margin-right etc... 
 - Tamaño: width y height
-- Flexbox, contenedor e items: propiedades display, flex-direction, justify-content, align-items, flex
-- Otros: border-radius, text-decoration, list-style
+- Flexbox, contenedor e items: propiedades display, flex-direction, justify-content, align-items, gap, flex
+- Otros: border-radius, text-decoration, list-style, text-align
+- Unidades: `% px vh vw`
 
