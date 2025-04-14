@@ -4,6 +4,8 @@
 - cd
 - ls
 - echo
+- cat
+- touch
 
 # Git
 
