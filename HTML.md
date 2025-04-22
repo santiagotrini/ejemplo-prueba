@@ -24,6 +24,8 @@ Un documento HTML tiene una estructura básica que incluye etiquetas necesarias 
 - `<head>`: Contiene metadatos (información sobre el documento, no visible directamente).
 - `<body>`: Contiene el contenido visible y estructurado del documento.
 
+**Importante**: para linkear la hoja de estilos externa lo hacemos con el elemento `<link>` en el `<head>`. Generalmente escribimos `<link rel="stylesheet" href="styles.css">`.
+
 ## Etiquetas, Elementos y Atributos
 ### Definiciones
 - **Etiqueta**: Una palabra clave entre `< >` que define un elemento, por ejemplo, `<p>`.
@@ -97,7 +99,7 @@ Usa `<img>` para mostrar imágenes:
 ```
 - `src`: Ruta o URL de la imagen.
 - `alt`: Texto alternativo (importante para accesibilidad).
-- `width`, `height`: Ajustan el tamaño.
+- `width`, `height`: Ajustan el tamaño. Pero mejor haganlo desde el CSS.
 
 ## Elementos Estructurales
 ### `<div>`
@@ -115,6 +117,9 @@ Contenedor en línea para estilizar texto o agrupar partes pequeñas:
 <p>Texto con <span style="color: red;">color rojo</span>.</p>
 ```
 
+El ejemplo de arriba usa el atributo `style` en el `<span>` para definir lo que se conoce como un estilo en línea.
+Los estilos en línea tienen prioridad siempre sobre las hojas de estilo externas o internas.
+
 ### `<main>`
 Define el contenido principal de la página:
 ```html
@@ -131,6 +136,20 @@ Define el pie de página:
     <p>© 2025 Mi Sitio Web</p>
 </footer>
 ```
+
+### Otros elementos estructurales en bloque para delimitar contenido y usarlos como contenedores
+
+```html
+<aside></aside>
+<head></head>
+<article></article>
+<section></section>
+```
+
+## Elementos en bloque vs elementos en línea
+
+Los elementos que por defecto tienen el valor `block` en la propiedad `display`. Como el `<div>`, el `<h1>`, el `<p>`. Son elementos que siempre ocupan su propia línea y abarcan todo el ancho disponible dentro de su contenedor.
+Otros elementos tienen la propiedad `display: inline` y se suelen usar para marcar frases o palabras dentro de un texto. Ejemplos: `<span> <em> <strong> <a>`. Es importante distinguir entre estos dos tipos de elementos a la hora de acomodar las cosas en la pantalla.
 
 ## Elementos Vacíos vs Elementos con Contenido
 - **Elementos Vacíos**: No tienen contenido ni etiqueta de cierre explícita (ejemplo: `<br>`, `<hr>`, `<img>`).
